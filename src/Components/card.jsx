@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from "./card.module.css"
 
-function Card({data1}) {
+function Card({data1, handleDecrement, handleIncrement}) {
     return (
       <div>
         <div className={styles.box}>
@@ -11,8 +11,12 @@ function Card({data1}) {
           <p>{data1.product_name}</p>
           <p>{data1.description}</p>
           <p>{data1.price}</p>
-              
-          <div></div>
+
+          <div className={styles.btn}>
+            <button onClick={handleDecrement}>-</button>
+            <div>{data1.qty}</div>
+            <button onClick={handleIncrement}>+</button>
+          </div>
 
           {data1.is_available ? (
             <div>

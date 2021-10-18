@@ -7,10 +7,19 @@ import styles from "./card.module.css"
 function Navbar() {
     const [items, setItems] = useState(data);
 
+    const handleIncrement = (id) => {
+        const counter = items.map((e) => e.id == id ? {...e, qty:e.qty+1}:e) ;
+        setItems(counter);
+    }
+    const handleDecrement = (id) => {
+        const counter = items.map((e) => e.id == id ? {...e, qty:e.qty-1}:e) ;
+        setItems(counter);
+    }
+
     return (
         <div className={styles.nav}>
             {items.map((item, id) => {
-                return <Card key={id} data1={item} />
+                return <Card key={id} data1={item} handleIncrement={handleIncrement} handleDecrement={handleDecrement} />
             })}
         </div>
     )
