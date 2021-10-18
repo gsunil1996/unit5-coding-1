@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import styles from "./Login.module.css";
 import Cart from './Cart';
+import Navbar from './Navbar';
 
 function Login() {
     const initState = {
@@ -30,7 +31,7 @@ function Login() {
     }
 
     if (isAuth) {
-        return <Cart />
+        return <Navbar />
     }
     
     return (
