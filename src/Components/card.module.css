@@ -1,6 +1,7 @@
 .box{
-    height: 100px;
-    width: 100px;
+    width: 300px;
     border: 2px solid orangered;
-    display: flex;
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(3, 30%);
 }
