@@ -36,7 +36,7 @@ function Login() {
     return (
         <div>
             <h2>Login Page</h2>
-            <div>
+            <div className={styles.main}>
                 <input type="text" placeholder="Enter Username" name="username" onChange={handleChange}/>
                 <br />
                 <input type="password" placeholder="Enter Password" name="password" onChange={handleChange} />
