@@ -1,7 +1,13 @@
 .box{
     width: 300px;
     border: 2px solid orangered;
-    display: grid;
+    display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
+}
+.nav{
+    display: grid;
     grid-template-columns: repeat(3, 30%);
+    grid-gap: 5%;
+    margin-left: 20px;
 }
