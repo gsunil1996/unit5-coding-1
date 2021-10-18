@@ -9,8 +9,21 @@ function Card({data1}) {
             <img src={data1.image_url} alt="image" />
           </div>
           <p>{data1.product_name}</p>
-                <p>{data1.description}</p>
-                <p>{data1.price}</p>
+          <p>{data1.description}</p>
+          <p>{data1.price}</p>
+              
+          <div></div>
+
+          {data1.is_available ? (
+            <div>
+              {" "}
+              <button> High Stock</button>
+            </div>
+          ) : (
+            <div>
+              <button>Low Stock</button>
+            </div>
+          )}
         </div>
       </div>
     );
